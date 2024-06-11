@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import HeaderLink from "../HeaderLink";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 const Header = () => {
     return (
@@ -21,6 +22,8 @@ const Header = () => {
                     New Student
                 </HeaderLink>
             </nav>
+
+            <ThemeSwitcher />
         </header>
     );
 };
