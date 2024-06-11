@@ -6,7 +6,7 @@ import NewStudent from "./pages/NewStudent";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Header />
 
       <Routes>
