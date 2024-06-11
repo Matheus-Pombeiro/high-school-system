@@ -1,10 +1,23 @@
 import { NavLink } from "react-router-dom";
-import HeaderLink from "../HeaderLink";
+
+import { useState } from "react";
+
 import ThemeSwitcher from "../ThemeSwitcher";
+import MenuHamburger from "../MenuHamburger";
+import Navbar from "../Navbar";
 
 const Header = () => {
+    // Declare a state that will help to verify if the menu hamburger is open or not
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+    // Declare an object that set the buttons' properties
+    const btnSettings = {
+        color: "white",
+        size: 30,
+    };
+
     return (
-        <header className="box-border py-3 px-5 bg-blue-500 flex justify-between items-center">
+        <header className="w-full box-border py-3 px-5 bg-blue-500 flex justify-between items-center flex-wrap">
             <NavLink to="/" >
                 <img 
                     src="/assets/logo.png" 
@@ -14,16 +27,18 @@ const Header = () => {
                 />
             </NavLink>
 
-            <nav className="box-border flex justify-between items-center gap-3">
-                <HeaderLink to="/" >
-                    Home
-                </HeaderLink>
-                <HeaderLink to="/new-student" >
-                    New Student
-                </HeaderLink>
-            </nav>
+            <Navbar />
 
-            <ThemeSwitcher />
+            <div className="box-border flex justify-between items-center gap-3">
+                <ThemeSwitcher btnSettings={btnSettings} />
+                <MenuHamburger 
+                    btnSettings={btnSettings}
+                    onClick={() => setMenuIsOpen(!menuIsOpen)}
+                    menuIsOpen={menuIsOpen}
+                />
+            </div>
+
+            {menuIsOpen ? <Navbar menuIsOpen={menuIsOpen} /> : ""}
         </header>
     );
 };
