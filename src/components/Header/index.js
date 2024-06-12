@@ -5,6 +5,7 @@ import { useState } from "react";
 import ThemeSwitcher from "../ThemeSwitcher";
 import MenuHamburger from "../MenuHamburger";
 import Navbar from "../Navbar";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const Header = () => {
     // Declare a state that will help to verify if the menu hamburger is open or not
@@ -29,7 +30,8 @@ const Header = () => {
 
             <Navbar />
 
-            <div className="box-border flex justify-between items-center gap-3">
+            <div className="box-border flex justify-between items-center gap-2">
+                <LanguageSwitcher />
                 <ThemeSwitcher btnSettings={btnSettings} />
                 <MenuHamburger 
                     btnSettings={btnSettings}
