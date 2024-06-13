@@ -8,9 +8,8 @@ import NewStudent from "./pages/NewStudent";
 import DefaultPage from "./components/DefaultPage";
 
 const App = () => {
+  // Declare a state that will contains the students' data
   const [students, setStudents] = useState([]);
-
-  console.log(students)
 
   return (
     <BrowserRouter>
