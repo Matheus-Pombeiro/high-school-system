@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 
 import { useState } from "react";
 
-import ThemeSwitcher from "../ThemeSwitcher";
 import MenuHamburger from "../MenuHamburger";
 import Navbar from "../Navbar";
 import LanguageSwitcher from "../LanguageSwitcher";
@@ -18,7 +17,7 @@ const Header = () => {
     };
 
     return (
-        <header className="w-full box-border py-3 px-5 bg-blue-500 flex justify-between items-center flex-wrap">
+        <header className="w-full box-border py-3 px-5 bg-blue-500 flex justify-between items-center flex-wrap drop-shadow-md">
             <NavLink to="/" >
                 <img 
                     src="/assets/logo.png" 
@@ -32,7 +31,6 @@ const Header = () => {
 
             <div className="box-border flex justify-between items-center gap-2">
                 <LanguageSwitcher />
-                <ThemeSwitcher btnSettings={btnSettings} />
                 <MenuHamburger 
                     btnSettings={btnSettings}
                     onClick={() => setMenuIsOpen(!menuIsOpen)}
