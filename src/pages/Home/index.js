@@ -6,13 +6,13 @@ const Home = () => {
     return (
         <>
             <div 
-                className="h-60 md:h-72 mb-8 bg-cover bg-center flex justify-center items-center"
+                className="h-60 md:h-72 bg-cover bg-center flex justify-center items-center"
                 style={{ backgroundImage: "url(/assets/main-bg.jpg)" }}
             >
-                <h1 className="text-white text-2xl md:text-4xl font-semibold">High School System</h1>
+                <h1 className="text-white h1">High School System</h1>
             </div>
 
-            <section className="w-10/12 md:w-8/12 xl:w-6/12 mx-auto mb-8 space-y-8">
+            <section className="container space-y-8">
                 <article className="space-y-4">
                     <h2 className="h2">Who am I?</h2>
                     <p className="p">
