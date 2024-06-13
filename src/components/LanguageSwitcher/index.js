@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
 
+    // Declare an array that contains objects with the languages' data
     const languageOptions = [
         {
             name: "English",
@@ -29,6 +30,7 @@ const LanguageSwitcher = () => {
                         src={languageOption.flag}
                         alt={languageOption.name}
                         title={languageOption.name}
+                        className="h-10"
                     />
                 </button>
             ))}
