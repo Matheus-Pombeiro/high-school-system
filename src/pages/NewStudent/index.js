@@ -1,101 +1,100 @@
-const NewStudent = () => {
+import { useState } from "react";
+
+import { v4 as uuidv4 } from "uuid";
+
+import Fieldset from "../../components/Fieldset";
+
+const NewStudent = ({ toRegisterStudent }) => {
+    // Declare a range of states that will contain the student's data
+    const [name, setName] = useState("");
+    const [age, setAge] = useState("");
+    const [profilePhoto, setProfilePhoto] = useState("");
+    const [currentSubject, setCurrentSubject] = useState("");
+    const [firstGrade, setFirstGrade] = useState("");
+    const [secondGrade, setSecondGrade] = useState("");
+
+    // Send the student's data to the father component to be keeped
+    const toSubmit = (e) => {
+        e.preventDefault();     // Prevents the form's automatic behaviuor
+
+        // Call the function that will send the student's data up
+        toRegisterStudent({
+            id: uuidv4(),
+            name: name,
+            age: age,
+            profilePhoto: profilePhoto,
+            currentSubject: currentSubject,
+            firstGrade: firstGrade,
+            secondGrade: secondGrade
+        });
+
+        // Clean all the states after been used to be used again
+        setName("");
+        setAge("");
+        setProfilePhoto("");
+        setCurrentSubject("");
+        setFirstGrade("");
+        setSecondGrade("");
+    };
+
     return (
         <>
             <h1 className="h1 side-h1">New Student</h1>
 
             <h2 className="h2 text-center">Next you can register a student</h2>
 
-            <form className="container box-border p-5 bg-slate-100 border border-red-500 flex flex-col justify-center items-center gap-5 rounded-md drop-shadow-md">
-                <fieldset className="fieldset">
-                    <label 
-                        htmlFor="name" 
-                        className="label"
-                    >
-                        Name                      
-                    </label>
-                    <input
-                        id="name"
-                        type="text"
-                        placeholder="Name..."
-                        className="input"
-                    />
-                </fieldset>
+            <form 
+                className="container box-border p-5 bg-slate-100 border border-red-500 flex flex-col justify-center items-center gap-5 rounded-md drop-shadow-md"
+                onSubmit={toSubmit}
+            >
+                <Fieldset 
+                    content={"Name"}
+                    type={"text"}
+                    required={true}
+                    value={name}
+                    toChange={value => setName(value)}
+                />
 
-                <fieldset className="fieldset">
-                    <label 
-                        htmlFor="age" 
-                        className="label"
-                    >
-                        Age
-                    </label>
-                    <input
-                        id="age"
-                        type="number"
-                        placeholder="Age..."
-                        className="input"
-                    />
-                </fieldset>
+                <Fieldset 
+                    content={"Age"}
+                    type={"number"}
+                    required={true}
+                    value={age}
+                    toChange={value => setAge(Number(value))}
+                />
 
-                <fieldset className="fieldset">
-                    <label 
-                        htmlFor="profile" 
-                        className="label"
-                    >
-                        Profile Photo
-                    </label>
-                    <input
-                        id="profile"
-                        type="text"
-                        placeholder="Profile Photo..."
-                        className="input"
-                    />
-                </fieldset>
+                <Fieldset 
+                    content={"Profile Photo"}
+                    type={"text"}
+                    required={false}
+                    value={profilePhoto}
+                    toChange={value => setProfilePhoto(value)}
+                />
 
-                <fieldset className="fieldset">
-                    <label 
-                        htmlFor="subject" 
-                        className="label"
-                    >
-                        Current Subject
-                    </label>
-                    <input
-                        id="subject"
-                        type="text"
-                        placeholder="Current Subject..."
-                        className="input"
-                    />
-                </fieldset>
+                <Fieldset 
+                    content={"Current Subject"}
+                    type={"text"}
+                    required={true}
+                    value={currentSubject}
+                    toChange={value => setCurrentSubject(value)}
+                />
 
                 <div className="fieldset-container">
-                    <fieldset className="fieldset">
-                        <label 
-                            htmlFor="firstGrade" 
-                            className="label"
-                        >
-                            1st Grade
-                        </label>
-                        <input
-                            id="firstGrade"
-                            type="number"
-                            placeholder="1st Grade..."
-                            className="input"
-                        />
-                    </fieldset>
+                    <Fieldset 
+                        content={"1st Grade"}
+                        type={"number"}
+                        required={true}
+                        value={firstGrade}
+                        toChange={value => setFirstGrade(Number(value))}
+                    />
 
-                    <fieldset className="fieldset">
-                        <label 
-                            htmlFor="secondGrade" 
-                            className="label"
-                        >
-                            2nd Grade
-                        </label>
-                        <input
-                            id="secondGrade"
-                            type="number"
-                            placeholder="2nd Grade..."
-                            className="input"
-                        />
-                    </fieldset>
+                    <Fieldset 
+                        content={"2nd Grade"}
+                        type={"number"}
+                        required={true}
+                        value={secondGrade}
+                        toChange={value => setSecondGrade(Number(value))}
+                    />
                 </div>
 
                 <button
