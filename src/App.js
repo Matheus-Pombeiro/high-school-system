@@ -7,7 +7,7 @@ import DefaultPage from "./components/DefaultPage";
 
 const App = () => {
   return (
-    <BrowserRouter >
+    <BrowserRouter>
       <Header />
 
       <Routes>
