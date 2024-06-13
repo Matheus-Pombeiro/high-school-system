@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer components {
+    .h1 {
+        @apply text-2xl md:text-4xl font-semibold ;
+    }
+
+    .side-h1 {
+        @apply my-8 text-red-500  text-center;
+    }
+
+    .container {
+        @apply w-10/12 md:w-8/12 xl:w-6/12 mx-auto my-8;
+    }
+
     .h2 {
         @apply text-red-500 text-xl md:text-2xl font-medium;
     }
@@ -13,5 +25,25 @@
 
     .link {
         @apply text-blue-500 visited:text-blue-800 hover:underline;
+    }
+
+    .fieldset {
+        @apply w-full lg:w-5/6 xl:w-3/6 flex flex-col gap-2;
+    }
+
+    .fieldset-container {
+        @apply w-full lg:w-5/6 xl:w-3/6 flex gap-2;
+    }
+
+    .label {
+        @apply text-lg md:text-xl;
+    }
+
+    .input {
+        @apply w-full h-10 xl:h-12 px-2 py-1 outline-none border border-gray-200 rounded focus:ring focus:border-blue-300 focus:ring-blue-100 ring-opacity-10;
+    }
+
+    .form-btn {
+        @apply w-full md:w-5/12 xl:w-2/6 p-3 bg-blue-500 text-white text-lg md:text-xl font-medium rounded-3xl hover:bg-blue-700 active:bg-blue-400;
     }
 }
