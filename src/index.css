@@ -11,12 +11,28 @@
         @apply my-8 text-red-500  text-center;
     }
 
-    .container {
-        @apply w-10/12 md:w-8/12 xl:w-6/12 mx-auto my-8;
+    .container-text {
+        @apply w-5/6 md:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto my-8 space-y-8;
+    }
+
+    .container-form {
+        @apply w-5/6 md:w-4/6 xl:w-3/6 mx-auto my-8 flex-col;
+    }
+
+    .container-cards {
+        @apply w-5/6 md:w-5/6 mx-auto my-8 flex-col md:flex-row flex-wrap;
+    }
+
+    .side-container {
+        @apply  box-border p-5 bg-slate-100 border border-red-500 flex justify-center items-center gap-5 rounded-md drop-shadow-md;
     }
 
     .h2 {
         @apply text-red-500 text-xl md:text-2xl font-medium;
+    }
+
+    .side-h2 {
+        @apply text-center;
     }
 
     .p {
