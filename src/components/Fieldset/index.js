@@ -10,6 +10,7 @@ const Fieldset = ({ content, type, required, value, toChange }) => {
             <input
                 id={content}
                 type={type}
+                min={type === "number" ? "0" : ""}
                 placeholder={`${content}...`}
                 className="input"
                 required={required}
