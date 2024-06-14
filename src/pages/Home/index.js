@@ -12,7 +12,7 @@ const Home = () => {
                 <h1 className="text-white h1">High School System</h1>
             </div>
 
-            <section className="container space-y-8">
+            <section className="container-text">
                 <article className="space-y-4">
                     <h2 className="h2">Who am I?</h2>
                     <p className="p">

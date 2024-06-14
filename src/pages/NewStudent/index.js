@@ -41,10 +41,10 @@ const NewStudent = ({ toRegisterStudent }) => {
         <>
             <h1 className="h1 side-h1">New Student</h1>
 
-            <h2 className="h2 text-center">Next you can register a student</h2>
+            <h2 className="h2 side-h2">Next you can register a student</h2>
 
             <form 
-                className="container box-border p-5 bg-slate-100 border border-red-500 flex flex-col justify-center items-center gap-5 rounded-md drop-shadow-md"
+                className="container-form side-container"
                 onSubmit={toSubmit}
             >
                 <Fieldset 
