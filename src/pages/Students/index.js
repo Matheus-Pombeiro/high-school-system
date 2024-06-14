@@ -1,7 +1,7 @@
 import { FaSortAlphaDown, FaSortAlphaDownAlt } from "react-icons/fa";
 import StudentCard from "../../components/StudentCard";
 
-const Students = ({ students }) => {
+const Students = ({ students, toDeleteStudent }) => {
     // Declare an object that set the buttons' properties
     const btnSettings = {
         color: "black",
@@ -27,7 +27,10 @@ const Students = ({ students }) => {
 
                 <section className="container-cards side-container">
                     {students.map(student => (
-                        <StudentCard student={student} />
+                        <StudentCard 
+                            student={student}
+                            toDeleteStudent={toDeleteStudent}
+                        />
                     ))}
 
                 </section>
