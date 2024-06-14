@@ -12,6 +12,11 @@ const App = () => {
   // Declare a state that will contains the students' data
   const [students, setStudents] = useState([]);
 
+  // Declare a function that allows the user delete a student
+  const toDeleteStudent = (id) => {
+    setStudents(students.filter(student => student.id !== id));
+  };
+
   return (
     <BrowserRouter>
       <Header />
@@ -29,6 +34,7 @@ const App = () => {
             path="students" 
             element={<Students 
               students={students}
+              toDeleteStudent={toDeleteStudent}
             />} 
           />
         </Route>
