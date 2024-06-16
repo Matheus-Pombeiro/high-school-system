@@ -7,17 +7,18 @@ import Home from "./pages/Home";
 import NewStudent from "./pages/NewStudent";
 import DefaultPage from "./components/DefaultPage";
 import Students from "./pages/Students";
+import Student from "./pages/Student";
 
 const App = () => {
   // Declare a state that will contains the students' data
   const [students, setStudents] = useState([
     {
       id: "1",
-      name: "a",
+      name: "Matheus Pombeiro",
       age: 55,
       profilePhoto: "https://media.licdn.com/dms/image/D4D03AQF7OC59nWxZWQ/profile-displayphoto-shrink_200_200/0/1709071293936?e=1723680000&v=beta&t=GiAbj2YT-CcQACxVVnWJYToIlT2UBXwKgsEBM9BRb-w",
       currentSubject: "Software",
-      firstGrade: 55,
+      firstGrade: 96,
       secondGrade: 55
     },
     {
@@ -88,6 +89,12 @@ const App = () => {
               toDeleteStudent={toDeleteStudent}
               handleSortCrescent={handleSortCrescent}
               handleSortDecrescent={handleSortDecrescent}
+            />}
+          />
+          <Route 
+            path="student/:id" 
+            element={<Student 
+              students={students}
             />} 
           />
         </Route>
