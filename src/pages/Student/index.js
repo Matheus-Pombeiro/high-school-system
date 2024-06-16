@@ -13,19 +13,21 @@ const Student = ({ students }) => {
     return (
         <>
             <h1 className="h1 side-h1">{student.name}</h1>
-            <section>
+            <section className="w-5/6 md:w-3/6 lg:w-4/6 xl:w-2/6 side-container mx-auto mt-10 md:mt-16 flex-col lg:flex-row">
                 {student.profilePhoto 
                     ? (
                         <img 
                             src={student.profilePhoto}
                             alt={student.name}
                             title={student.name}
+                            className="size-52 md:size-64 rounded-full"
                         />
                     )
                     : ""
                 }
 
-                <div>
+                <div className="flex flex-col justify-center gap-4 text-xl">
+                    <p>{student.name}</p>
                     <p>{student.age} years old</p>
                     <p>{student.currentSubject}</p>
                     <p>1st Grade: {student.firstGrade.toFixed(1)}</p>
