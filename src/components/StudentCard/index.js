@@ -2,7 +2,9 @@ import { AiFillCloseCircle } from "react-icons/ai";
 
 const StudentCard = ({ student, toDeleteStudent }) => {
     return (
-        <div className="w-64 h-72 bg-white box-border border border-blue-500 rounded-lg flex flex-col relative">
+        <div 
+            className="w-64 h-72 bg-white box-border border border-blue-500 rounded-lg flex flex-col relative"    
+        >
             <AiFillCloseCircle
                 color="red"
                 size={25} 
@@ -11,12 +13,17 @@ const StudentCard = ({ student, toDeleteStudent }) => {
             />
 
             <div className="w-full h-32 bg-blue-500 flex justify-center">
-                <img 
-                    src={student.profilePhoto}
-                    alt={student.name}
-                    title={student.name}
-                    className="size-28 rounded-full relative top-2/4"
-                />
+                {student.profilePhoto 
+                    ? (
+                        <img 
+                            src={student.profilePhoto}
+                            alt={student.name}
+                            title={student.name}
+                            className="size-28 rounded-full relative top-2/4"
+                        />
+                    )
+                    : ""
+                }
             </div>
 
             <div className="my-auto space-y-4 text-center">
