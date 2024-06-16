@@ -8,6 +8,7 @@ import NewStudent from "./pages/NewStudent";
 import DefaultPage from "./components/DefaultPage";
 import Students from "./pages/Students";
 import Student from "./pages/Student";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   // Declare a state that will contains the students' data
@@ -99,7 +100,7 @@ const App = () => {
           />
         </Route>
 
-        <Route path="*" element={<h1>Not Found Page</h1>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
     </BrowserRouter>
