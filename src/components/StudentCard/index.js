@@ -6,7 +6,8 @@ const StudentCard = ({ student, toDeleteStudent }) => {
     return (
        
         <div
-            className="w-64 h-72 bg-white box-border border border-blue-500 rounded-lg flex flex-col relative transition-all ease-in-out duration-200 hover:-translate-y-3"
+            className="w-64 h-72 bg-white box-border border rounded-lg flex flex-col relative transition-all ease-in-out duration-200 hover:-translate-y-3"
+            style={{ borderColor: student.color }}
         >
             <AiFillCloseCircle
                 color="red"
@@ -15,7 +16,10 @@ const StudentCard = ({ student, toDeleteStudent }) => {
                 onClick={() => toDeleteStudent(student.id)}
             />
             <Link to={`/student/${student.id}`} >
-                <div className="w-full h-32 bg-blue-500 flex justify-center">
+                <div 
+                    className="w-full h-32 flex justify-center"
+                    style={{ backgroundColor: student.color }}
+                >
                     {student.profilePhoto
                         ? (
                             <img
