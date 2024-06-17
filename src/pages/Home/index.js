@@ -11,7 +11,7 @@ const Home = () => {
 
             <section className="container-text">
                 <article className="space-y-4">
-                    <h2 className="h2">Who am I?</h2>
+                    <h2 className="h2">What is it?</h2>
                     <p className="p">
                         High School System is a basic system made in React.js and aimed at teachers who want to register students and give grades to them. Here you can see the students that were added by yourself and their own pages that contain their data.
                     </p>
