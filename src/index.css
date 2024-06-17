@@ -27,6 +27,10 @@
         @apply  box-border p-5 bg-slate-100 border border-red-500 flex justify-center items-center gap-5 rounded-md drop-shadow-md;
     }
 
+    .student-container {
+        @apply w-5/6 md:w-3/6 lg:w-4/6 xl:w-2/6 mx-auto mt-10 md:mt-16 box-border p-5 bg-slate-100 border flex flex-col lg:flex-row justify-center items-center gap-5 rounded-md drop-shadow-md;
+    }
+
     .h2 {
         @apply text-red-500 text-xl md:text-2xl font-medium;
     }
