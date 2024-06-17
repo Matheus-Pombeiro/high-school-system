@@ -13,7 +13,10 @@ const Student = ({ students }) => {
     return (
         <>
             <h1 className="h1 side-h1">{student.name}</h1>
-            <section className="w-5/6 md:w-3/6 lg:w-4/6 xl:w-2/6 side-container mx-auto mt-10 md:mt-16 flex-col lg:flex-row">
+            <section 
+                className="student-container"
+                style={{ borderColor: student.color }}
+            >
                 {student.profilePhoto 
                     ? (
                         <img 
