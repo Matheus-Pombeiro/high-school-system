@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { NavLink } from "react-router-dom";
 
 import { useState } from "react";
@@ -7,6 +9,8 @@ import Navbar from "../Navbar";
 import LanguageSwitcher from "../LanguageSwitcher";
 
 const Header = () => {
+    const { t } = useTranslation();     // Translation reference
+
     // Declare a state that will help to verify if the menu hamburger is open or not
     const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -22,7 +26,7 @@ const Header = () => {
                 <img 
                     src="/assets/logo.png" 
                     alt="Logo" 
-                    title="Home"
+                    title={t("Home")}
                     className="h-14"
                 />
             </NavLink>

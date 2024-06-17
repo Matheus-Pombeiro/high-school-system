@@ -1,6 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 import HeaderLink from "../HeaderLink";
 
 const Navbar = ({ menuIsOpen }) => {
+    const { t } = useTranslation();     // Translation reference
+
     return (
         <nav className={`
             box-border md:flex justify-between items-center gap-5
@@ -10,13 +14,13 @@ const Navbar = ({ menuIsOpen }) => {
             }
         `}>
             <HeaderLink to="/" >
-                Home
+                {t("Home")}
             </HeaderLink>
             <HeaderLink to="/new-student" >
-                New Student
+                {t("New Student")}
             </HeaderLink>
             <HeaderLink to="/students">
-                Students
+                {t("Students")}
             </HeaderLink>
         </nav>
     );

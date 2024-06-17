@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { useState } from "react";
 
 import { v4 as uuidv4 } from "uuid";
@@ -5,6 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 import Fieldset from "../../components/Fieldset";
 
 const NewStudent = ({ toRegisterStudent }) => {
+    const { t } = useTranslation();     // Translation reference
+
     // Declare a range of states that will contain the student's data
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
@@ -42,16 +46,16 @@ const NewStudent = ({ toRegisterStudent }) => {
 
     return (
         <>
-            <h1 className="h1 side-h1">New Student</h1>
+            <h1 className="h1 side-h1">{t("h1NewStudent")}</h1>
 
-            <h2 className="h2 side-h2">Next you can register a student</h2>
+            <h2 className="h2 side-h2">{t("h2NewStudent")}</h2>
 
             <form 
                 className="container-form side-container"
                 onSubmit={toSubmit}
             >
                 <Fieldset 
-                    content={"Name"}
+                    content={t("Name")}
                     type={"text"}
                     required={true}
                     value={name}
@@ -59,7 +63,7 @@ const NewStudent = ({ toRegisterStudent }) => {
                 />
 
                 <Fieldset 
-                    content={"Age"}
+                    content={t("Age")}
                     type={"number"}
                     required={true}
                     value={age}
@@ -67,7 +71,7 @@ const NewStudent = ({ toRegisterStudent }) => {
                 />
 
                 <Fieldset 
-                    content={"Profile Photo"}
+                    content={t("Profile Photo")}
                     type={"text"}
                     required={false}
                     value={profilePhoto}
@@ -75,7 +79,7 @@ const NewStudent = ({ toRegisterStudent }) => {
                 />
 
                 <Fieldset 
-                    content={"Color"}
+                    content={t("Color")}
                     type={"color"}
                     required={true}
                     value={color}
@@ -83,7 +87,7 @@ const NewStudent = ({ toRegisterStudent }) => {
                 />
 
                 <Fieldset 
-                    content={"Current Subject"}
+                    content={t("Current Subject")}
                     type={"text"}
                     required={true}
                     value={currentSubject}
@@ -92,7 +96,7 @@ const NewStudent = ({ toRegisterStudent }) => {
 
                 <div className="fieldset-container">
                     <Fieldset 
-                        content={"1st Grade"}
+                        content={t("1st Grade")}
                         type={"number"}
                         required={true}
                         value={firstGrade}
@@ -100,7 +104,7 @@ const NewStudent = ({ toRegisterStudent }) => {
                     />
 
                     <Fieldset 
-                        content={"2nd Grade"}
+                        content={t("2nd Grade")}
                         type={"number"}
                         required={true}
                         value={secondGrade}
@@ -108,11 +112,7 @@ const NewStudent = ({ toRegisterStudent }) => {
                     />
                 </div>
 
-                <button
-                    className="form-btn"
-                >
-                    Submit                   
-                </button>
+                <button className="form-btn">{t("Register")}</button>
             </form>
         </>
     );

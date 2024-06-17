@@ -1,5 +1,32 @@
 {
     "translation": {
-        "Welcome": "Bem-vindo(a)"
+        "firstH2Home": "O que é High School System?",
+        "firstPHome": "O High School System é um sistema básico feito em React.js e voltado para professores que desejam cadastrar alunos e dar notas a eles. Aqui você pode ver os alunos que você adicionou e suas próprias páginas que contêm seus dados.",
+        "secondH2Home": "O que é React.js?",
+        "secondPHome": "React é uma estrutura JavaScript feita pela Meta que é usada para criar interfaces de usuário (UI) em aplicativos da web. É popular porque é fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, como Meta e Airbnb.",
+        "thirdH2Home": "O que é React Router Dom?",
+        "thirdPHome": "Neste projeto está sendo utilizada uma ferramenta React chamada React Router Dom, que permite criar rotas em aplicações web, sem sair da página. Tecnicamente, React Router DOM é um pacote npm que permite implementar roteamento dinâmico em um aplicativo web. Ele permite exibir páginas e permitir que os usuários naveguem por elas. É uma biblioteca de roteamento do lado do cliente e do servidor com todos os recursos para React.",
+        "fourthH2Home": "Sobre o Autor de High School System",
+        "fourthPHomePartI": "High School System foi desenvolvido por",
+        "fourthPHomePartII": "Por favor, confira seu perfil no LinkedIn e seus outros",
+        "fourthPHomePartIII": "projetos autorais",
+        "fourthPHomePartIV": "Este projeto foi feito com o objetivo de estudar e fixar alguns conceitos de Engenharia de Software, como a criação e gerenciamento de documentação de um App (história de usuário, requisitos funcionais e não funcionais, etc.), lógica de programação e algoritmos, programação React, estrutura de dados simples com JavaScript e muito mais.",
+        "h1NewStudent": "Novo Estudante",
+        "h2NewStudent": "A seguir você pode registrar um novo estudante",
+        "Name": "Nome",
+        "Age": "Idade",
+        "Profile Photo": "Foto de Perfil",
+        "Color": "Cor",
+        "Current Subject": "Disciplina",
+        "1st Grade": "1ª Nota",
+        "2nd Grade": "2ª Nota",
+        "Register": "Registrar",
+        "h1Students": "Estudantes",
+        "h2Students": "A seguir você pode conferir os seus estudantes",
+        "years old": "anos",
+        "Average": "Média",
+        "Home": "Início",
+        "New Student": "Novo Estudante",
+        "Students": "Estudantes"
     }
 }

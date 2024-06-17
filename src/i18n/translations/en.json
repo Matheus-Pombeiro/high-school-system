@@ -1,5 +1,32 @@
 {
     "translation": {
-        "Welcome": "Welcome"
+        "firstH2Home": "What is High School System?",
+        "firstPHome": "High School System is a basic system made in React.js and aimed at teachers who want to register students and give grades to them. Here you can see the students that were added by yourself and their own pages that contain their data.",
+        "secondH2Home": "What is React.js?",
+        "secondPHome": "React is a JavaScript framework made by Meta that is used to create user interfaces (UI) in web apps. It is popular because it's easy to use,  highly flexible and scalable, and it's used by many tech companies, like Meta and Airbnb.",
+        "thirdH2Home": "What is React Router Dom?",
+        "thirdPHome": "In this project, a React tool called React Router Dom is being used, which allows you to create routes in web applications, without leaving the page. Technically, React Router DOM is an npm package that enables you to implement dynamic routing in a web app. It allows you to display pages and allow users to navigate them. It is a fully-featured client and server-side routing library for React.",
+        "fourthH2Home": "About High School System's Author",
+        "fourthPHomePartI": "High School System was developed by",
+        "fourthPHomePartII": "Please, check it out his LinkedIn profile and other",
+        "fourthPHomePartIII": "authorial projects",
+        "fourthPHomePartIV": "This project was made aiming to study and fix some Software Engineering concepts, such as the creation and management of an App documentation (User story, functional and non-functional requirements, etc.), programming logic and algorithims, React programming, simple data structure with JavaScript and more.",
+        "h1NewStudent": "New Student",
+        "h2NewStudent": "Next you can register a student",
+        "Name": "Name",
+        "Age": "Age",
+        "Profile Photo": "Profile Photo",
+        "Color": "Color",
+        "Current Subject": "Current Subject",
+        "1st Grade": "1st Grade",
+        "2nd Grade": "2nd Grade",
+        "Register": "Register",
+        "h1Students": "Students",
+        "h2Students": "Next you can check your students",
+        "years old": "years old",
+        "Average": "Average",
+        "Home": "Home",
+        "New Student": "New Student",
+        "Students": "Students"
     }
 }

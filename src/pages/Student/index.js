@@ -1,6 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 import { useParams } from "react-router-dom";
 
 const Student = ({ students }) => {
+    const { t } = useTranslation();     // Translation reference
+
     const params = useParams();     // Receive the url parameter of the page
 
     // Returns the specific student based on their id
@@ -31,11 +35,11 @@ const Student = ({ students }) => {
 
                 <div className="flex flex-col justify-center gap-4 text-xl">
                     <p>{student.name}</p>
-                    <p>{student.age} years old</p>
+                    <p>{student.age} {t("years old")}</p>
                     <p>{student.currentSubject}</p>
-                    <p>1st Grade: {student.firstGrade.toFixed(1)}</p>
-                    <p>2nd Grade: {student.secondGrade.toFixed(1)}</p>
-                    <p>Average: {average.toFixed(1)}</p>
+                    <p>{t("1st Grade")}: {student.firstGrade.toFixed(1)}</p>
+                    <p>{t("2nd Grade")}: {student.secondGrade.toFixed(1)}</p>
+                    <p>{t("Average")}: {average.toFixed(1)}</p>
                 </div>
             </section>
         </>
