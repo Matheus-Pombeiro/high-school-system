@@ -18,6 +18,7 @@ const App = () => {
       name: "Matheus Pombeiro",
       age: 55,
       profilePhoto: "https://media.licdn.com/dms/image/D4D03AQF7OC59nWxZWQ/profile-displayphoto-shrink_200_200/0/1709071293936?e=1723680000&v=beta&t=GiAbj2YT-CcQACxVVnWJYToIlT2UBXwKgsEBM9BRb-w",
+      color: "#F5AB27",
       currentSubject: "Software",
       firstGrade: 96,
       secondGrade: 55
@@ -27,6 +28,7 @@ const App = () => {
       name: "Mátheus",
       age: 55,
       profilePhoto: "https://media.licdn.com/dms/image/D4D03AQF7OC59nWxZWQ/profile-displayphoto-shrink_200_200/0/1709071293936?e=1723680000&v=beta&t=GiAbj2YT-CcQACxVVnWJYToIlT2UBXwKgsEBM9BRb-w",
+      color: "#F5AB27",
       currentSubject: "Software",
       firstGrade: 55,
       secondGrade: 55
@@ -36,6 +38,7 @@ const App = () => {
       name: "Zôddia",
       age: 55,
       profilePhoto: "https://media.licdn.com/dms/image/D4D03AQF7OC59nWxZWQ/profile-displayphoto-shrink_200_200/0/1709071293936?e=1723680000&v=beta&t=GiAbj2YT-CcQACxVVnWJYToIlT2UBXwKgsEBM9BRb-w",
+      color: "#F5AB27",
       currentSubject: "Software",
       firstGrade: 55,
       secondGrade: 55
@@ -45,6 +48,7 @@ const App = () => {
       name: "Aáron",
       age: 55,
       profilePhoto: "https://media.licdn.com/dms/image/D4D03AQF7OC59nWxZWQ/profile-displayphoto-shrink_200_200/0/1709071293936?e=1723680000&v=beta&t=GiAbj2YT-CcQACxVVnWJYToIlT2UBXwKgsEBM9BRb-w",
+      color: "#F5AB27",
       currentSubject: "Software",
       firstGrade: 55,
       secondGrade: 55
