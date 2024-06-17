@@ -9,6 +9,7 @@ const NewStudent = ({ toRegisterStudent }) => {
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [profilePhoto, setProfilePhoto] = useState("");
+    const [color, setColor] = useState("#000000");
     const [currentSubject, setCurrentSubject] = useState("");
     const [firstGrade, setFirstGrade] = useState("");
     const [secondGrade, setSecondGrade] = useState("");
@@ -23,6 +24,7 @@ const NewStudent = ({ toRegisterStudent }) => {
             name: name,
             age: age,
             profilePhoto: profilePhoto,
+            color: color,
             currentSubject: currentSubject,
             firstGrade: firstGrade,
             secondGrade: secondGrade
@@ -32,6 +34,7 @@ const NewStudent = ({ toRegisterStudent }) => {
         setName("");
         setAge("");
         setProfilePhoto("");
+        setColor("#000000");
         setCurrentSubject("");
         setFirstGrade("");
         setSecondGrade("");
@@ -69,6 +72,14 @@ const NewStudent = ({ toRegisterStudent }) => {
                     required={false}
                     value={profilePhoto}
                     toChange={value => setProfilePhoto(value)}
+                />
+
+                <Fieldset 
+                    content={"Color"}
+                    type={"color"}
+                    required={true}
+                    value={color}
+                    toChange={value => setColor(value)}
                 />
 
                 <Fieldset 
