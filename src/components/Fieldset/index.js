@@ -12,7 +12,7 @@ const Fieldset = ({ content, type, required, value, toChange }) => {
                 type={type}
                 min={type === "number" ? "0" : ""}
                 placeholder={`${content}...`}
-                className="input"
+                className={`input ${type === "color" ? "cursor-pointer" : ""}`}
                 required={required}
                 value={value}
                 onChange={e => toChange(e.target.value)}
